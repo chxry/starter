@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  font-family: "Fredoka One";
+  --bg: #161320;
+  --blink: #575268;
+  --fg: #d9e0ee;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--col);
+  transition: background-color 500ms ease-in-out;
+}
+
+input {
+  display: block;
+  width: 100rem;
+  height: 5rem;
+  margin-top: 0.5rem;
+  background: var(--bg);
+  box-shadow: 0 0 0 6px var(--fg);
+  border-radius: 8px;
+  color: var(--fg);
+  padding: 1rem;
+  font-size: 6rem;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 4rem;
+  color: var(--bg);
+  text-shadow: -4px -4px 0 var(--fg), 4px -4px 0 var(--fg), -4px 4px 0 var(--fg),
+    4px 4px 0 var(--fg);
+}
+
+sup {
+  padding-left: 0.25rem;
+  font-size: 2rem;
+  vertical-align: top;
+}
+
+.colon {
+  display: inline-block;
+  padding: 0 0.25rem;
+  animation: 1s blink ease infinite;
+  transform: translateY(-0.1rem);
+}
+
+#date {
+  float: right;
+}
+
+@keyframes blink {
+  50% {
+    color: var(--blink);
+  }
+}
